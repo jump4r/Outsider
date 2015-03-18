@@ -5,7 +5,10 @@ public class Key : MonoBehaviour
 {
 
     public GameObject doorObject;
+
     private Door door;
+    private static int openThreshold = 50;
+    private int numParticles = 0;
 
     // Use this for initialization
     void Start()
@@ -28,7 +31,36 @@ public class Key : MonoBehaviour
         {
             door.unlocked = true;
             Debug.Log("Door Unlocked");
-            Destroy(gameObject);
+            Destroy(this.gameObject);
+        }
+
+        // If we have particles opening the door.
+        else if (col.tag == "Particle")
+        {
+            if (numParticles >= openThreshold)
+            {
+                door.unlocked = true;
+                door.OpenDoor();
+                // Before Destory, set particles back to original target, need access to ParticleScript.cs to do this.
+                foreach (GameObject p in ParticleScript.allParticles)
+                {
+                    p.GetComponent<ParticleScript>().SetTargetToPlayer();
+                }
+                Destroy(this.gameObject);
+            }
+
+            else
+            {
+                numParticles += 1;
+            }
+        }
+    }
+
+    void OnTriggerExit(Collider col)
+    {
+        if (col.tag == "Particle")
+        {
+            numParticles -= 1;
         }
     }
 }

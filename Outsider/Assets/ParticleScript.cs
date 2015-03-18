@@ -9,7 +9,8 @@ public class ParticleScript : MonoBehaviour {
 
 	SphereCollider collider;
 
-	static List<GameObject> allParticles = new List<GameObject>();
+    private GameObject player;
+	public static List<GameObject> allParticles = new List<GameObject>();
 
 	void Awake()
 	{
@@ -19,12 +20,9 @@ public class ParticleScript : MonoBehaviour {
 	void Start () {
 
 		collider = GetComponent<SphereCollider>();
+        player = target;
 
-		if(Random.value > .6f)
-		{
-			target = allParticles[Random.Range(0,allParticles.Count)];
-			secondaryTarget = allParticles[Random.Range(0,allParticles.Count)];
-		}
+        RandomizeParticleTargets();
 	}
 
 	public float gravity = 5f;
@@ -52,12 +50,35 @@ public class ParticleScript : MonoBehaviour {
 			velocity += (target.transform.position - transform.position).normalized * targetAcceleration * Time.deltaTime;
 		}
 
-		if(Input.GetKeyDown(KeyCode.T))
-		{
-			target = secondaryTarget;
-		}
+        /*
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            // To Fix: Buggyness when switching targets.
+            // secondaryTarget = player.RaycastOut();
+            target = secondaryTarget;
+        }*/
 
 	}
+
+    public void RandomizeParticleTargets()
+    {
+        if (Random.value > .6f)
+        {
+            target = allParticles[Random.Range(0, allParticles.Count)];
+            secondaryTarget = allParticles[Random.Range(0, allParticles.Count)];
+        }
+    }
+
+    public void SetTarget(GameObject newTarget) 
+    {
+        target = newTarget;
+        RandomizeParticleTargets();
+    }
+
+    public void SetTargetToPlayer()
+    {
+        SetTarget(player);
+    }
 
 	void OnTriggerStay(Collider other) {
 

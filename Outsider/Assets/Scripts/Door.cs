@@ -19,7 +19,7 @@ public class Door : MonoBehaviour
 
     }
 
-    void OpenDoor()
+    public void OpenDoor()
     {
         if (unlocked)
         {
@@ -29,7 +29,7 @@ public class Door : MonoBehaviour
         }
     }
 
-    void CloseDoor()
+    public void CloseDoor()
     {
         if (unlocked)
         {
