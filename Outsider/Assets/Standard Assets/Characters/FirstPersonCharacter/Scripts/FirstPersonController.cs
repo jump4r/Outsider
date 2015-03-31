@@ -15,6 +15,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private float m_RunSpeed;
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
         [SerializeField] private float m_JumpSpeed;
+		[SerializeField] private float m_FlightAcceleration = .5f;
+		[SerializeField] private const float m_MaxFlightAcceleration = 5f;
         [SerializeField] private float m_StickToGroundForce;
         [SerializeField] private float m_GravityMultiplier;
         [SerializeField] private MouseLook m_MouseLook;
@@ -63,10 +65,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             RotateView();
             // the jump state needs to read here to make sure it is not missed
-            if (!m_Jump)
-            {
-                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-            }
+
+            //if (!m_Jump)
+            //{
+            m_Jump = CrossPlatformInputManager.GetButton("Jump");
+            //}
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
@@ -75,10 +78,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_MoveDir.y = 0f;
                 m_Jumping = false;
             }
+
+			/*
             if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
             {
                 m_MoveDir.y = 0f;
-            }
+            }*/
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
         }
@@ -120,8 +125,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     m_Jump = false;
                     m_Jumping = true;
                 }
+                
             }
-            else
+
+			if (CrossPlatformInputManager.GetButton ("Jump")) {
+				m_MoveDir.y += Time.fixedDeltaTime * m_FlightAcceleration;
+				m_FlightAcceleration = (m_FlightAcceleration > m_MaxFlightAcceleration) ? m_FlightAcceleration + .5f : 5.0f;
+			}
+            else if (!CrossPlatformInputManager.GetButton ("Jump"))
             {
                 m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
             }
