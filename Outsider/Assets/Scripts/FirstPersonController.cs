@@ -4,6 +4,7 @@ using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
 
+
 namespace UnityStandardAssets.Characters.FirstPerson
 {
     [RequireComponent(typeof (CharacterController))]
@@ -44,6 +45,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+
         // Use this for initialization
         private void Start()
         {
@@ -77,6 +79,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 PlayLandingSound();
                 m_MoveDir.y = 0f;
                 m_Jumping = false;
+				ParticleManager.ResetFlyTime();
             }
 
 			/*
@@ -128,11 +131,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 
             }
 
-			if (CrossPlatformInputManager.GetButton ("Jump")) {
+			if (CrossPlatformInputManager.GetButton ("Jump") && ParticleManager.CanFly ()) 
+			{
 				m_MoveDir.y += Time.fixedDeltaTime * m_FlightAcceleration;
 				m_FlightAcceleration = (m_FlightAcceleration > m_MaxFlightAcceleration) ? m_FlightAcceleration + .5f : 5.0f;
+				ParticleManager.IncrementFlyTime ();
 			}
-            else if (!CrossPlatformInputManager.GetButton ("Jump"))
+            else 
             {
                 m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
             }

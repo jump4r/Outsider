@@ -32,7 +32,7 @@ public class ParticleScript : MonoBehaviour {
 
 	public float maxSpeed = 30f;
 
-	Vector3 velocity;
+	public Vector3 velocity;
 
 	// Update is called once per frame
 	void Update () {
@@ -68,6 +68,10 @@ public class ParticleScript : MonoBehaviour {
             secondaryTarget = allParticles[Random.Range(0, allParticles.Count)];
         }
     }
+
+	public void SetVelocity(Vector3 newVel) {
+		velocity = newVel;
+	}
 
     public void SetTarget(GameObject newTarget) 
     {
