@@ -9,18 +9,34 @@ public class ParticleScript : MonoBehaviour {
 
 	SphereCollider collider;
 
-    private GameObject player;
+    private static GameObject player;
 	public static List<GameObject> allParticles = new List<GameObject>();
+
+	private static Vector3 wave;
+	private static float waveMagnitude = 1f;
+	private static float waveDuration = 1f;
+	private bool myWave = false;
+
 
 	void Awake()
 	{
 		allParticles.Add(this.gameObject);
+
+		if(player == null)
+		{
+			player = GameObject.FindGameObjectWithTag("Player") as GameObject;
+		}
+
+		wave = new Vector3(this.transform.position.x, 0f, this.transform.position.z);
+		myWave = true;
+		waveMagnitude = .2f;
+		waveDuration = 2f;
 	}
+
 	// Use this for initialization
 	void Start () {
 
 		collider = GetComponent<SphereCollider>();
-        player = target;
 
         RandomizeParticleTargets();
 	}
@@ -37,17 +53,50 @@ public class ParticleScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(velocity.magnitude > maxSpeed)
+		if(myWave)
 		{
-			velocity = maxSpeed * velocity.normalized;
+			wave = new Vector3(wave.x, wave.y + Time.deltaTime, wave.z);
+			waveDuration -= Time.deltaTime;
+			if(waveDuration < 0f)
+			{
+				waveDuration = 0f;
+			}
+		}
+
+		Vector3 dif = (target.transform.position - transform.position);
+
+		float maxSpeedReal = maxSpeed + Mathf.Min(dif.magnitude,2f);
+
+		float accelerationReal = maxSpeedReal / maxSpeed * targetAcceleration; //Scale acceleration the same amount
+
+
+		if(velocity.magnitude > maxSpeedReal)
+		{
+			velocity = maxSpeedReal * velocity.normalized;
 		}
 
 		transform.position += velocity * Time.deltaTime;
+
 		velocity += new Vector3(0,-gravity,0f) * Time.deltaTime;
+
+		Vector2 waveDif = new Vector2(transform.position.x, transform.position.y) - new Vector2(wave.x, wave.y);
+
+		if(waveDuration > 0f)
+		{
+			velocity += Vector3.up * (waveDif.magnitude / 3f) * waveMagnitude * Time.deltaTime;
+		}
 
 		if(target != null)
 		{
-			velocity += (target.transform.position - transform.position).normalized * targetAcceleration * Time.deltaTime;
+			if(dif.magnitude > 6f)
+			{
+				velocity += dif.normalized * accelerationReal * Time.deltaTime;
+			}
+			else
+			{
+				velocity -= velocity.normalized * velocity.magnitude * .8f * Time.deltaTime;
+			}
+
 		}
 
         /*
@@ -67,6 +116,10 @@ public class ParticleScript : MonoBehaviour {
             target = allParticles[Random.Range(0, allParticles.Count)];
             secondaryTarget = allParticles[Random.Range(0, allParticles.Count)];
         }
+		else
+		{
+			target = player;
+		}
     }
 
 	public void SetVelocity(Vector3 newVel) {
