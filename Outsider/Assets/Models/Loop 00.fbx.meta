@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: de6a6e04add6281409bde13d7530a9dc
-timeCreated: 1427850676
+guid: 522533c3e2fe7eb409dabb0cbeddd5f3
+timeCreated: 1427853949
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -10,6 +10,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: pCylinder12
+    7400000: Take 001
     9500000: //RootNode
   materials:
     importMaterials: 1
