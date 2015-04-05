@@ -12,6 +12,9 @@ public class ParticleScript : MonoBehaviour {
     private static GameObject player;
 	public static List<GameObject> allParticles = new List<GameObject>();
 
+    public bool shot = false;
+    private const float shotVelocityMult = 20f;
+
 	private static Vector3 wave;
 	private static float waveMagnitude = 1f;
 	private static float waveDuration = 1f;
@@ -63,41 +66,51 @@ public class ParticleScript : MonoBehaviour {
 			}
 		}
 
-		Vector3 dif = (target.transform.position - transform.position);
+        Vector3 dif = (target.transform.position - transform.position);
 
-		float maxSpeedReal = maxSpeed + Mathf.Min(dif.magnitude,2f);
+        float maxSpeedReal = maxSpeed + Mathf.Min(dif.magnitude, 2f);
 
-		float accelerationReal = maxSpeedReal / maxSpeed * targetAcceleration; //Scale acceleration the same amount
+        float accelerationReal = maxSpeedReal / maxSpeed * targetAcceleration; //Scale acceleration the same amount
 
 
-		if(velocity.magnitude > maxSpeedReal)
-		{
-			velocity = maxSpeedReal * velocity.normalized;
-		}
+        if (velocity.magnitude > maxSpeedReal & !shot)
+        {
+            velocity = maxSpeedReal * velocity.normalized;
+        }
 
-		transform.position += velocity * Time.deltaTime;
+        transform.position += velocity * Time.deltaTime;
 
-		velocity += new Vector3(0,-gravity,0f) * Time.deltaTime;
+        velocity += new Vector3(0, -gravity, 0f) * Time.deltaTime;
 
-		Vector2 waveDif = new Vector2(transform.position.x, transform.position.y) - new Vector2(wave.x, wave.y);
+        Vector2 waveDif = new Vector2(transform.position.x, transform.position.y) - new Vector2(wave.x, wave.y);
 
-		if(waveDuration > 0f)
-		{
-			velocity += Vector3.up * (waveDif.magnitude / 3f) * waveMagnitude * Time.deltaTime;
-		}
+        if (waveDuration > 0f)
+        {
+            velocity += Vector3.up * (waveDif.magnitude / 3f) * waveMagnitude * Time.deltaTime;
+        }
 
-		if(target != null)
-		{
-			if(dif.magnitude > 6f)
-			{
-				velocity += dif.normalized * accelerationReal * Time.deltaTime;
-			}
-			else
-			{
-				velocity -= velocity.normalized * velocity.magnitude * .8f * Time.deltaTime;
-			}
+        if (shot)
+        {
+            velocity = (target.transform.position - transform.position).normalized * shotVelocityMult * Time.fixedDeltaTime;
+        }
 
-		}
+        if (target != null)
+        {
+            if (dif.magnitude > 6f)
+            {
+                velocity += dif.normalized * accelerationReal * Time.deltaTime;
+            }
+            else
+            {
+                velocity -= velocity.normalized * velocity.magnitude * .8f * Time.deltaTime;
+            }
+
+            if (shot)
+            {
+                velocity *= shotVelocityMult;
+            }
+
+        }
 
         /*
         if (Input.GetKeyDown(KeyCode.T))
@@ -125,6 +138,11 @@ public class ParticleScript : MonoBehaviour {
 	public void SetVelocity(Vector3 newVel) {
 		velocity = newVel;
 	}
+
+    public void SetShotTarget(GameObject newTarget)
+    {
+        target = newTarget;
+    }
 
     public void SetTarget(GameObject newTarget) 
     {
