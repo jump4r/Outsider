@@ -28,6 +28,12 @@ public class TractorBeamScript : MonoBehaviour {
 			if(tractorBeamOn)
 			{
 				tractorBeamOn = false;
+				int particlesCount = ParticleScript.allParticles.Count;
+				for(int i = 0; i < particlesCount; i++)
+				{
+					ParticleScript particle = ParticleScript.allParticles[i];
+					particle.headToPosition = false;
+				}
 			}
 			else
 			{
@@ -65,11 +71,14 @@ public class TractorBeamScript : MonoBehaviour {
 			Vector3 xDir = Vector3.Cross(dir, Vector3.up).normalized;
 			Vector3 yDir = Vector3.Cross(dir, xDir).normalized;
 
+
+		
 			for(int i = 0; i < particlesCount; i++)
 			{
 				float disAlongPath = ((float)i / (float)particlesCount);
-
-				ParticleScript.allParticles[i].transform.position = origin + i * dir.normalized * disFromParticle + radius * Mathf.Sin(disAlongPath*frequency+offset) * xDir + radius * Mathf.Cos (disAlongPath*frequency+offset) * yDir;
+				ParticleScript particle = ParticleScript.allParticles[i];
+				particle.headToPosition = true;
+				particle.positionalTarget = origin + i * dir.normalized * disFromParticle + radius * Mathf.Sin(disAlongPath*frequency+offset) * xDir + radius * Mathf.Cos (disAlongPath*frequency+offset) * yDir;
 			}
 		}
 	}

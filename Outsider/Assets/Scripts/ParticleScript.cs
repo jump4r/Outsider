@@ -4,13 +4,17 @@ using System.Collections.Generic;
 
 public class ParticleScript : MonoBehaviour {
 
+	//Stuff for the tractor beam
+	public Vector3 positionalTarget;
+	public bool headToPosition = false;
+
 	public GameObject target;
 	public GameObject secondaryTarget;
 
 	SphereCollider collider;
 
     private static GameObject player;
-	public static List<GameObject> allParticles = new List<GameObject>();
+	public static List<ParticleScript> allParticles = new List<ParticleScript>();
 
     public bool shot = false;
     private const float shotVelocityMult = 20f;
@@ -23,7 +27,7 @@ public class ParticleScript : MonoBehaviour {
 
 	void Awake()
 	{
-		allParticles.Add(this.gameObject);
+		allParticles.Add(this);
 
 		if(player == null)
 		{
@@ -68,11 +72,19 @@ public class ParticleScript : MonoBehaviour {
 
         Vector3 dif = (target.transform.position - transform.position);
 
+		if(headToPosition)
+		{
+			dif = positionalTarget - transform.position;
+		}
+
         float maxSpeedReal = maxSpeed + Mathf.Min(dif.magnitude, 2f);
 
         float accelerationReal = maxSpeedReal / maxSpeed * targetAcceleration; //Scale acceleration the same amount
-
-
+		if(headToPosition)
+		{
+			maxSpeedReal *= 4f;
+			accelerationReal *= 100f;
+		}
         if (velocity.magnitude > maxSpeedReal & !shot)
         {
             velocity = maxSpeedReal * velocity.normalized;
@@ -94,21 +106,33 @@ public class ParticleScript : MonoBehaviour {
             velocity = (target.transform.position - transform.position).normalized * shotVelocityMult * Time.fixedDeltaTime;
         }
 
-        if (target != null)
+        if (target != null || headToPosition)
         {
-            if (dif.magnitude > 6f)
-            {
-                velocity += dif.normalized * accelerationReal * Time.deltaTime;
-            }
-            else
-            {
-                velocity -= velocity.normalized * velocity.magnitude * .8f * Time.deltaTime;
-            }
+			if(headToPosition)
+			{
+				Vector3 targetVelocity = positionalTarget - transform.position;
+				Vector3 velocityDif = (targetVelocity - velocity);
 
-            if (shot)
-            {
-                velocity *= shotVelocityMult;
-            }
+				accelerationReal = Mathf.Min(accelerationReal, velocityDif.magnitude);
+
+				velocity += velocityDif * accelerationReal * Time.deltaTime;
+			}
+			else
+			{
+	            if (dif.magnitude > 6f)
+	            {
+	                velocity += dif.normalized * accelerationReal * Time.deltaTime;
+	            }
+	            else
+	            {
+	                velocity -= velocity.normalized * velocity.magnitude * .8f * Time.deltaTime;
+	            }
+
+	            if (shot)
+	            {
+	                velocity *= shotVelocityMult;
+	            }
+			}
 
         }
 
@@ -126,8 +150,8 @@ public class ParticleScript : MonoBehaviour {
     {
         if (Random.value > .6f)
         {
-            target = allParticles[Random.Range(0, allParticles.Count)];
-            secondaryTarget = allParticles[Random.Range(0, allParticles.Count)];
+			target = allParticles[Random.Range(0, allParticles.Count)].gameObject;
+            secondaryTarget = allParticles[Random.Range(0, allParticles.Count)].gameObject;
         }
 		else
 		{
@@ -157,9 +181,12 @@ public class ParticleScript : MonoBehaviour {
 
 	void OnTriggerStay(Collider other) {
 
-		Vector3 pointOfContact = other.ClosestPointOnBounds(transform.position);
-		Vector3 dif = pointOfContact - transform.position;
+		if(!headToPosition)
+		{
+			Vector3 pointOfContact = other.ClosestPointOnBounds(transform.position);
+			Vector3 dif = pointOfContact - transform.position;
 
-		velocity -= ((1f - ((dif).magnitude / collider.radius)) * Time.deltaTime * repelForce) * dif.normalized;
+			velocity -= ((1f - ((dif).magnitude / collider.radius)) * Time.deltaTime * repelForce) * dif.normalized;
+		}
 	}
 }

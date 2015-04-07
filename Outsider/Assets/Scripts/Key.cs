@@ -42,9 +42,9 @@ public class Key : MonoBehaviour
                 door.unlocked = true;
                 door.OpenDoor();
                 // Before Destory, set particles back to original target, need access to ParticleScript.cs to do this.
-                foreach (GameObject p in ParticleScript.allParticles)
+                foreach (ParticleScript p in ParticleScript.allParticles)
                 {
-                    p.GetComponent<ParticleScript>().SetTargetToPlayer();
+                    p.SetTargetToPlayer();
                 }
                 Destroy(this.gameObject);
             }
