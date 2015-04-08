@@ -63,7 +63,7 @@ public class TractorBeamScript : MonoBehaviour {
 			offset -= updateSpeed * Time.deltaTime;
 
 			frequency = .5f + Mathf.Sin (offset/20f)* 100f;
-			radius = 1f + Mathf.Sin (offset/20f)* .5f;
+			radius = 1.5f + Mathf.Sin (offset/20f)* .5f;
 
 			int particlesCount = ParticleScript.allParticles.Count;
 
@@ -71,14 +71,14 @@ public class TractorBeamScript : MonoBehaviour {
 			Vector3 xDir = Vector3.Cross(dir, Vector3.up).normalized;
 			Vector3 yDir = Vector3.Cross(dir, xDir).normalized;
 
-
+			float realDisPerParticle = (end - origin).magnitude / (float)particlesCount;
 		
 			for(int i = 0; i < particlesCount; i++)
 			{
 				float disAlongPath = ((float)i / (float)particlesCount);
 				ParticleScript particle = ParticleScript.allParticles[i];
 				particle.headToPosition = true;
-				particle.positionalTarget = origin + i * dir.normalized * disFromParticle + radius * Mathf.Sin(disAlongPath*frequency+offset) * xDir + radius * Mathf.Cos (disAlongPath*frequency+offset) * yDir;
+				particle.positionalTarget = origin + i * dir.normalized * realDisPerParticle + radius * Mathf.Sin(disAlongPath*frequency+offset) * xDir + radius * Mathf.Cos (disAlongPath*frequency+offset) * yDir;
 			}
 		}
 	}
