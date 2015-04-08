@@ -85,9 +85,15 @@ public class TractorBeamScript : MonoBehaviour {
 				particle.positionalTarget = origin + i * dir.normalized * realDisPerParticle + radius * Mathf.Sin(disAlongPath*frequency+offset) * xDir + radius * Mathf.Cos (disAlongPath*frequency+offset) * yDir;
 			}
 
+
 			if(IsObjectInTractorBeam(gameObjectToFloat))
 			{
-				gameObjectToFloat.GetComponent<CharacterController>().Move((end - origin).normalized*100f * Time.deltaTime);//.AddForce((origin - end).normalized * 30f);
+				gameObjectToFloat.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().DisableGravity = true;
+				gameObjectToFloat.GetComponent<CharacterController>().Move((end - origin).normalized*3f * Time.deltaTime);//.AddForce((origin - end).normalized * 30f);
+			}
+			else
+			{
+				gameObjectToFloat.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().DisableGravity = false;
 			}
 
 		}

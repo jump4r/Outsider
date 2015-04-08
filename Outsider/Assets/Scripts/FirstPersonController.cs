@@ -139,14 +139,23 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			}
             else 
             {
-                m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
+				if(!DisableGravity)
+				{
+                	m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
+				}
+				else
+				{
+					m_MoveDir = new Vector3(m_MoveDir.x, 0, m_MoveDir.z);
+				}
             }
+
             m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.fixedDeltaTime);
 
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);
         }
 
+		public bool DisableGravity = false;
 
         private void PlayJumpSound()
         {
