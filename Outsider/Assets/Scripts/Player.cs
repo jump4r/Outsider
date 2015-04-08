@@ -13,6 +13,10 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		m_CharacterController = GetComponent<CharacterController>();
+
+		
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
 	}
 	
 	// Update is called once per frame
