@@ -20,6 +20,10 @@ public class TractorBeamScript : MonoBehaviour {
 	public Vector3 origin;
 	public Vector3 end;
 
+	//Stuff related to pulling the character along the tractor beam
+	public GameObject gameObjectToFloat;
+	public float tractorRadius = 2f;
+
 	// Update is called once per frame
 	void Update () {
 	
@@ -80,6 +84,35 @@ public class TractorBeamScript : MonoBehaviour {
 				particle.headToPosition = true;
 				particle.positionalTarget = origin + i * dir.normalized * realDisPerParticle + radius * Mathf.Sin(disAlongPath*frequency+offset) * xDir + radius * Mathf.Cos (disAlongPath*frequency+offset) * yDir;
 			}
+
+			if(IsObjectInTractorBeam(gameObjectToFloat))
+			{
+				gameObjectToFloat.GetComponent<CharacterController>().Move((end - origin).normalized*100f * Time.deltaTime);//.AddForce((origin - end).normalized * 30f);
+			}
+
 		}
+	}
+
+	public bool IsObjectInTractorBeam(GameObject go)
+   	{
+		Vector3 path = (end - origin).normalized;
+
+		float originVal = Vector3.Project(origin-origin, path).magnitude;
+		float endVal = Vector3.Project(end-origin, path).magnitude;
+
+		Vector3 closestPoint = Vector3.Project(go.transform.position-origin, path);
+		float closestPointVal = closestPoint.magnitude;
+
+		//Check to see if the object is on the line
+		if((closestPointVal > originVal && closestPointVal < endVal) || (closestPointVal < originVal && closestPointVal > endVal))
+		{
+			Vector3 dif = ((closestPoint+origin) - go.transform.position);
+			if(dif.magnitude < tractorRadius)
+			{
+				return true;
+			}
+		}
+
+		return false;
 	}
 }
