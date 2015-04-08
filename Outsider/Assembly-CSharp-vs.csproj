@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Background\Rock.cs" />
      <Compile Include="Assets\Scripts\Billboard.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\FirstPersonController.cs" />
@@ -53,12 +54,14 @@
      <Compile Include="Assets\Scripts\Key.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\ParticleBud.cs" />
+     <Compile Include="Assets\Scripts\ParticleCollector.cs" />
      <Compile Include="Assets\Scripts\ParticleManager.cs" />
      <Compile Include="Assets\Scripts\ParticleScript.cs" />
      <Compile Include="Assets\Scripts\ParticleShooter.cs" />
      <Compile Include="Assets\Scripts\PlayBudOpen.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\RigidbodyFirstPersonController.cs" />
+     <Compile Include="Assets\TractorBeamScript.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
