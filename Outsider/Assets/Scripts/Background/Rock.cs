@@ -17,7 +17,7 @@ public class Rock : MonoBehaviour
     {
         oscSpeed = Random.Range(.2f, .4f);
         oscSpeed2 = Random.Range(.3f, .6f);
-        oscLength = Random.Range(20, 50);
+        oscLength = Random.Range(85, 120);
     }
 
     // Update is called once per frame

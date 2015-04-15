@@ -116,7 +116,7 @@ public class TractorBeamScript : MonoBehaviour {
 				if(IsObjectInTractorBeam(gameObjectToFloat))
 				{
 					gameObjectToFloat.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().DisableGravity = true;
-					gameObjectToFloat.GetComponent<CharacterController>().Move((end - origin).normalized*3f * Time.deltaTime);//.AddForce((origin - end).normalized * 30f);
+					gameObjectToFloat.GetComponent<CharacterController>().Move((end - origin).normalized*9f * Time.deltaTime);//.AddForce((origin - end).normalized * 30f);
 				}
 				else
 				{

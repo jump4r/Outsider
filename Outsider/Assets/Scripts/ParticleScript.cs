@@ -53,7 +53,7 @@ public class ParticleScript : MonoBehaviour {
 
 	public float targetAcceleration = 20f;
 
-	public float maxSpeed = 30f;
+	public float maxSpeed = 60f;
 
 	public Vector3 velocity;
 
