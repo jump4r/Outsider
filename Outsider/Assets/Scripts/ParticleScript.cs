@@ -179,6 +179,12 @@ public class ParticleScript : MonoBehaviour {
         SetTarget(player);
     }
 
+    public void ReturnToPlayer()
+    {
+        target = player;
+        Debug.Log("Return to Player");
+    }
+
 	void OnTriggerStay(Collider other) {
 
 		if(!headToPosition)

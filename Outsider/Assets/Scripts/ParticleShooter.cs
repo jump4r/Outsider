@@ -28,7 +28,14 @@ public class ParticleShooter : MonoBehaviour {
         }
 	}
 
-    public void Shoot(Transform target) { 
+    public void Shoot(Transform target) {
+
+        if (ParticleScript.allParticles.Count <= 0)
+        {
+            Debug.Log("Don't shoot, no particles");
+            return;
+        }
+
         if (particleIndex >= ParticleScript.allParticles.Count) {
             particleIndex = 0;
         }
@@ -37,7 +44,7 @@ public class ParticleShooter : MonoBehaviour {
         ps.shot = true;
         ps.velocity = (target.transform.position - ps.gameObject.transform.position).normalized * shootSpeed * Time.fixedDeltaTime;
         ps.SetShotTarget(target.gameObject);
-
+        ps.Invoke("ReturnToPlayer", 5f);
         
         Debug.Log("Shoot Particle: " + particleIndex + " at GameObject " + target.transform);
         particleIndex += 1;

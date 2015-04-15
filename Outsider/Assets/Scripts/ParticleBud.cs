@@ -5,7 +5,7 @@ public class ParticleBud : MonoBehaviour {
 
 	// [RequireComponent (typeof (Animator))]
 
-	private const int numToSpawn = 20;
+	public int  numToSpawn = 7;
 	public GameObject particle;
 	private const float particleExitVelocity = 11f; 
 	private bool spawnFlag = true;
@@ -30,6 +30,7 @@ public class ParticleBud : MonoBehaviour {
 			tmp.GetComponent<ParticleScript>().SetVelocity (Random.insideUnitSphere * particleExitVelocity);
 			spawnFlag = false;
 
+            
 			Debug.Log ("Play the god damn door opening animation");
 			anim.clip = open;
 			anim.Play ();
