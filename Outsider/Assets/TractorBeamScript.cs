@@ -46,7 +46,7 @@ public class TractorBeamScript : MonoBehaviour {
 	
 		if(Input.GetMouseButtonDown(0))
 		{
-			if(tractorBeamOn)
+			if(tractorBeamOn && false)
 			{
 				DisableTractorBeam();
 			}

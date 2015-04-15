@@ -187,7 +187,7 @@ public class ParticleScript : MonoBehaviour {
 
 	void OnTriggerStay(Collider other) {
 
-		if(!headToPosition)
+		if(!headToPosition && other.tag == "Particle")
 		{
 			Vector3 pointOfContact = other.ClosestPointOnBounds(transform.position);
 			Vector3 dif = pointOfContact - transform.position;

@@ -12,9 +12,20 @@ public class Billboard : MonoBehaviour
 			m_Camera = Camera.main; 
 	}
 
+	public bool yOnly;
+
 	void Update()
 	{
-		transform.LookAt(transform.position + m_Camera.transform.rotation * Vector3.back,
-		                 m_Camera.transform.rotation * Vector3.up);
+		if(yOnly)
+		{
+			Vector3 v = m_Camera.transform.position - transform.position;
+			v.x = v.z = 0.0f;
+			transform.LookAt(m_Camera.transform.position - v); 
+		}
+		else
+		{
+			transform.LookAt(transform.position + m_Camera.transform.rotation * Vector3.back,
+			                 m_Camera.transform.rotation * Vector3.up);
+		}
 	}
 }

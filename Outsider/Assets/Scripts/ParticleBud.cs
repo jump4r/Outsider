@@ -27,7 +27,7 @@ public class ParticleBud : MonoBehaviour {
 	private void SpawnParticles() {
 		for ( int i = 0; i < numToSpawn; i++) {
 			GameObject tmp = GameObject.Instantiate(particle, transform.position, Quaternion.identity) as GameObject;
-			tmp.GetComponent<ParticleScript>().SetVelocity (Random.insideUnitSphere * particleExitVelocity);
+			tmp.GetComponent<ParticleScript>().SetVelocity ((Vector3.up + (Random.insideUnitSphere) * .3f) * particleExitVelocity);
 			spawnFlag = false;
 
             

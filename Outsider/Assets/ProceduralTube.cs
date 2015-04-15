@@ -50,6 +50,7 @@ public class ProceduralTube : MonoBehaviour {
 		mesh.triangles = newTriangles.ToArray();
 		mesh.normals = newNormals.ToArray();
 
+		GetComponent<MeshCollider>().sharedMesh = mesh;
 		//mesh.RecalculateNormals();
 
 	}
@@ -63,7 +64,7 @@ public class ProceduralTube : MonoBehaviour {
 
 		int uvy = 0;
 
-		for(int i = 0; i < 200; i++)
+		for(int i = 0; i < 400; i++)
 		{
 			val += valChange;
 			
