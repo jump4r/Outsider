@@ -23,6 +23,7 @@ public class ProceduralTube : MonoBehaviour {
 	public List<Vector3> newVertices;
 	public List<Vector2> newUV;
 	public List<int> newTriangles;
+	public List<Vector3> newNormals;
 
 	void Start() {
 	//	Generate();
@@ -36,6 +37,7 @@ public class ProceduralTube : MonoBehaviour {
 	{
 		newVertices.Clear();
 		newTriangles.Clear ();
+		newNormals.Clear();
 		newUV.Clear();
 
 		CreateLoop(true);
@@ -46,8 +48,9 @@ public class ProceduralTube : MonoBehaviour {
 		mesh.vertices = newVertices.ToArray();
 		mesh.uv = newUV.ToArray();
 		mesh.triangles = newTriangles.ToArray();
+		mesh.normals = newNormals.ToArray();
 
-		mesh.RecalculateNormals();
+		//mesh.RecalculateNormals();
 
 	}
 
@@ -111,7 +114,7 @@ public class ProceduralTube : MonoBehaviour {
 		int segmentStartIndex = newVertices.Count;
 
 		float stepAmount = (Mathf.PI * 2f) / tubeResolution;
-		float val = 0f;
+		float val = 180f;
 
 		float uv = 0;
 		float uvStep = 1f/tubeResolution;
@@ -119,9 +122,12 @@ public class ProceduralTube : MonoBehaviour {
 		int i = 0; 
 		for(i = 0; i < tubeResolution-1; i++)
 		{
-			Vector3 newVert = start + (forward * Mathf.Sin(val) + right * Mathf.Cos(val))*tubeRadius;
+			Vector3 normal = (forward * Mathf.Sin(val) + right * Mathf.Cos(val));
+			Vector3 newVert = start + normal*tubeRadius;
 
 			newVertices.Add (newVert);
+			newNormals.Add(normal);
+
 			newUV.Add(new Vector2(uv,uvy));
 
 			newTriangles.Add(segmentStartIndex+i);
@@ -136,19 +142,32 @@ public class ProceduralTube : MonoBehaviour {
 			uv += uvStep;
 		}
 
+		val += stepAmount;
 		//Last triangle to close the loop
-		Vector3 endVert = start + (forward * Mathf.Sin(val) + right * Mathf.Cos(val))*tubeRadius;
-		
+		Vector3 n1 = (forward * Mathf.Sin(val) + right * Mathf.Cos(val));
+		Vector3 endVert = start + n1*tubeRadius;
+		 
+		val += stepAmount;
+
+		Vector3 n2 = (forward * Mathf.Sin(val) + right * Mathf.Cos(val));
+		Vector3 nextVert = start + n2*tubeRadius;
+
 		newVertices.Add (endVert);
+		newVertices.Add (nextVert);
+
+		newNormals.Add(n1);
+		newNormals.Add (n2);
+
 		newUV.Add(new Vector2(uv, uvy));
+		newUV.Add(new Vector2(uv+uvStep, uvy));
 
 		newTriangles.Add(segmentStartIndex+i);
 		newTriangles.Add(segmentStartIndex+i+tubeResolution);
-		newTriangles.Add(segmentStartIndex+tubeResolution);
+		newTriangles.Add(segmentStartIndex+i+tubeResolution+1);
 		
-		newTriangles.Add(segmentStartIndex+i);
-		newTriangles.Add(segmentStartIndex+tubeResolution);
-		newTriangles.Add(segmentStartIndex);
+		newTriangles.Add(segmentStartIndex+i+1);
+		newTriangles.Add(segmentStartIndex+i+1+tubeResolution+1);
+		newTriangles.Add(segmentStartIndex+i+1+1);
 
 	}
 	// Update is called once per frame
