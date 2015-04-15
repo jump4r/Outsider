@@ -5,7 +5,7 @@ public class ParticleBud : MonoBehaviour {
 
 	// [RequireComponent (typeof (Animator))]
 
-	public int  numToSpawn = 7;
+	public int  numToSpawn = 4;
 	public GameObject particle;
 	private const float particleExitVelocity = 11f; 
 	private bool spawnFlag = true;

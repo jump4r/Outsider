@@ -24,6 +24,23 @@ public class TractorBeamScript : MonoBehaviour {
 	public GameObject gameObjectToFloat;
 	public float tractorRadius = 2f;
 
+	public float expireTime = 3f;
+	float expireCount = 0f;
+	public float expireRadius = 3f;
+
+	void DisableTractorBeam()
+	{
+
+		int particlesCount = ParticleScript.allParticles.Count;
+		for(int i = 0; i < particlesCount; i++)
+		{
+			ParticleScript particle = ParticleScript.allParticles[i];
+			particle.headToPosition = false;
+		}
+		tractorBeamOn = false;
+		expireCount = 0;
+	}
+
 	// Update is called once per frame
 	void Update () {
 	
@@ -31,13 +48,7 @@ public class TractorBeamScript : MonoBehaviour {
 		{
 			if(tractorBeamOn)
 			{
-				tractorBeamOn = false;
-				int particlesCount = ParticleScript.allParticles.Count;
-				for(int i = 0; i < particlesCount; i++)
-				{
-					ParticleScript particle = ParticleScript.allParticles[i];
-					particle.headToPosition = false;
-				}
+				DisableTractorBeam();
 			}
 			else
 			{
@@ -58,44 +69,60 @@ public class TractorBeamScript : MonoBehaviour {
 				{
 					end = this.transform.position + this.transform.forward * distance;
 				}
+				expireCount = 0;
+
 			}
 
 		}
 
 		if(tractorBeamOn)
 		{
-			offset -= updateSpeed * Time.deltaTime;
+			Vector3 dif = DifToTractorBeam(gameObjectToFloat.transform.position);
 
-			frequency = .5f + Mathf.Sin (offset/20f)* 100f;
-			radius = 1.5f + Mathf.Sin (offset/20f)* .5f;
-
-			int particlesCount = ParticleScript.allParticles.Count;
-
-			Vector3 dir = end - origin;
-			Vector3 xDir = Vector3.Cross(dir, Vector3.up).normalized;
-			Vector3 yDir = Vector3.Cross(dir, xDir).normalized;
-
-			float realDisPerParticle = (end - origin).magnitude / (float)particlesCount;
-		
-			for(int i = 0; i < particlesCount; i++)
+			if(dif.magnitude > expireRadius)
 			{
-				float disAlongPath = ((float)i / (float)particlesCount);
-				ParticleScript particle = ParticleScript.allParticles[i];
-				particle.headToPosition = true;
-				particle.positionalTarget = origin + i * dir.normalized * realDisPerParticle + radius * Mathf.Sin(disAlongPath*frequency+offset) * xDir + radius * Mathf.Cos (disAlongPath*frequency+offset) * yDir;
-			}
-
-
-			if(IsObjectInTractorBeam(gameObjectToFloat))
-			{
-				gameObjectToFloat.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().DisableGravity = true;
-				gameObjectToFloat.GetComponent<CharacterController>().Move((end - origin).normalized*3f * Time.deltaTime);//.AddForce((origin - end).normalized * 30f);
+				expireCount += Time.deltaTime;
+				if(expireCount > expireTime)
+				{
+					DisableTractorBeam();
+				}
 			}
 			else
 			{
-				gameObjectToFloat.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().DisableGravity = false;
-			}
+				expireCount = 0;
+			
+				offset -= updateSpeed * Time.deltaTime;
 
+				frequency = .5f + Mathf.Sin (offset/20f)* 100f;
+				radius = 1.5f + Mathf.Sin (offset/20f)* .5f;
+
+				int particlesCount = ParticleScript.allParticles.Count;
+
+				Vector3 dir = end - origin;
+				Vector3 xDir = Vector3.Cross(dir, Vector3.up).normalized;
+				Vector3 yDir = Vector3.Cross(dir, xDir).normalized;
+
+				float realDisPerParticle = (end - origin).magnitude / (float)particlesCount;
+			
+				for(int i = 0; i < particlesCount; i++)
+				{
+					float disAlongPath = ((float)i / (float)particlesCount);
+					ParticleScript particle = ParticleScript.allParticles[i];
+					particle.headToPosition = true;
+					particle.positionalTarget = origin + i * dir.normalized * realDisPerParticle + radius * Mathf.Sin(disAlongPath*frequency+offset) * xDir + radius * Mathf.Cos (disAlongPath*frequency+offset) * yDir;
+				}
+
+
+				if(IsObjectInTractorBeam(gameObjectToFloat))
+				{
+					gameObjectToFloat.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().DisableGravity = true;
+					gameObjectToFloat.GetComponent<CharacterController>().Move((end - origin).normalized*3f * Time.deltaTime);//.AddForce((origin - end).normalized * 30f);
+				}
+				else
+				{
+					gameObjectToFloat.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().DisableGravity = false;
+				}
+			}
 		}
 	}
 
@@ -120,5 +147,37 @@ public class TractorBeamScript : MonoBehaviour {
 		}
 
 		return false;
+	}
+
+	public Vector3 DifToTractorBeam(Vector3 point)
+	{
+		Vector3 path = (end - origin).normalized;
+		
+		float originVal = Vector3.Project(origin-origin, path).magnitude;
+		float endVal = Vector3.Project(end-origin, path).magnitude;
+		
+		Vector3 closestPoint = Vector3.Project(point-origin, path);
+		float closestPointVal = closestPoint.magnitude;
+		
+		//Check to see if the object is on the line
+		if((closestPointVal > originVal && closestPointVal < endVal) || (closestPointVal < originVal && closestPointVal > endVal))
+		{
+			Vector3 dif = ((closestPoint+origin) - point);
+			return dif;
+		}
+		else
+		{
+			Vector3 dif1 = point - origin;
+			Vector3 dif2 = point - end;
+
+			if(dif1.sqrMagnitude < dif2.sqrMagnitude)
+			{
+				return dif1;
+			}
+			else
+			{
+				return dif2;
+			}
+		}
 	}
 }
