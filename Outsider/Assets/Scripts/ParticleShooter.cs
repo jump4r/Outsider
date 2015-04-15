@@ -17,9 +17,10 @@ public class ParticleShooter : MonoBehaviour {
 	void Update () {
         if (Input.GetMouseButtonDown(1))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            // Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = new Ray(transform.position, this.transform.forward);
             RaycastHit hit;
-            Debug.DrawRay(ray.origin, ray.direction * 100, Color.red);
+            Debug.DrawRay(ray.origin, ray.direction * 100, Color.red);  
             
             if (Physics.Raycast(ray, out hit, 100f))
             {
