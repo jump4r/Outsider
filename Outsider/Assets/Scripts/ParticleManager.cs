@@ -31,7 +31,7 @@ public class ParticleManager : MonoBehaviour {
 
 	public static bool CanFly() {
 		if (currentFlyTime > maxFlyTime) {
-			Debug.Log ("Cannot fly");
+			//Debug.Log ("Cannot fly");
 			return false;
 		}
 		return true;

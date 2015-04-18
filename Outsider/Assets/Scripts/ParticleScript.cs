@@ -70,7 +70,13 @@ public class ParticleScript : MonoBehaviour {
 			}
 		}
 
-        Vector3 dif = (target.transform.position - transform.position);
+        if (target != null)
+        {
+            target = player;
+        }
+         
+         Vector3 dif = (target.transform.position - transform.position);
+        
 
 		if(headToPosition)
 		{

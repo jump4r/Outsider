@@ -1,0 +1,2530 @@
+Initialize engine version: 5.0.0f4 (5b98b70ebeb9)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 460M          (ID=0xdd1)
+    Vendor:   NVIDIA
+    VRAM:     1483 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Andrew\Documents\Game Dev\Outsider\Outsider\Builds\Outsider-v0.1-DemoDay_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Andrew\Documents\Game Dev\Outsider\Outsider\Builds\Outsider-v0.1-DemoDay_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Andrew\Documents\Game Dev\Outsider\Outsider\Builds\Outsider-v0.1-DemoDay_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Andrew\Documents\Game Dev\Outsider\Outsider\Builds\Outsider-v0.1-DemoDay_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Andrew\Documents\Game Dev\Outsider\Outsider\Builds\Outsider-v0.1-DemoDay_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Andrew\Documents\Game Dev\Outsider\Outsider\Builds\Outsider-v0.1-DemoDay_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Andrew\Documents\Game Dev\Outsider\Outsider\Builds\Outsider-v0.1-DemoDay_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Andrew\Documents\Game Dev\Outsider\Outsider\Builds\Outsider-v0.1-DemoDay_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.056 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Andrew\Documents\Game Dev\Outsider\Outsider\Builds\Outsider-v0.1-DemoDay_Data\Managed\System.Core.dll (this message is harmless)
+Shader 'Nature/Terrain/Standard': dependency 'BaseMapShader' shader 'Hidden/TerrainEngine/Splatmap/Standard-Base' not found
+Max Fly Time: 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1964 -> priority: 1 
+  Thread -> id: 1670 -> priority: 1 
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 398)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Play the god damn door opening animation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 1520)
+

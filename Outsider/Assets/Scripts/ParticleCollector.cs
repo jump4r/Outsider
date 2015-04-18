@@ -9,34 +9,40 @@ public class ParticleCollector : MonoBehaviour
 
     private bool full = false;
     public int currentParticles = 0;
-    public Material fullMaterial;
+
+    public Animator anim;
+    public AnimationClip fullAnimation;
+    public AnimationClip idleAnimation;
     // Use this for initialization
     void Start()
     {
-
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        LoopAnimation();
     }
 
     void OnTriggerEnter(Collider col)
     {
-        Debug.Log("Trigger Entered: " + col.tag);
         if (col.tag == "Particle" && !full)
         {
-            Debug.Log("Call Trigger Code");
+            //Debug.Log("Call Trigger Code");
             currentParticles++;
             Destroy(col.gameObject);
             if (currentParticles >= maxParticles)
             {
                 // Destroy(GetComponent<BoxCollider>()); // Might not wanna do this idk yet
-                full = true;
-                GetComponent<MeshRenderer>().material = fullMaterial;
+                anim.SetBool("Full", true); 
+               
             }
         }
     }
 
+    private void LoopAnimation()
+    {
+   
+    }
 }
