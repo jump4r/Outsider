@@ -17,14 +17,26 @@ public class ParticleShooter : MonoBehaviour {
 	void Update () {
         if (Input.GetMouseButtonDown(1))
         {
-            // Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Ray ray = new Ray(transform.position, this.transform.forward);
-            RaycastHit hit;
+            RaycastHit[] hit = Physics.RaycastAll(transform.position, transform.forward, 100f);
             Debug.DrawRay(ray.origin, ray.direction * 100, Color.red);  
-            
-            if (Physics.Raycast(ray, out hit, 100f))
+            bool collectorDetected = false;
+
+            // if (Physics.RaycastAll(ray, out hit, ))
+            for (int i = 0; i < hit.Length; i++)
             {
-                Shoot(hit.transform);
+                if (hit[i].transform.tag == "Collector")
+                {
+                    Shoot(hit[i].transform);
+                    break;
+                }
+            }
+
+            // Hacky solution to simulate shooting because raycasting doesn't work /cry.
+            // Shoot first object that was hit.
+            if (!collectorDetected && hit.Length > 0)
+            {
+                Shoot(hit[0].transform);
             }
         }
 	}

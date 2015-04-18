@@ -11,8 +11,7 @@ public class ParticleCollector : MonoBehaviour
     public int currentParticles = 0;
 
     public Animator anim;
-    public AnimationClip fullAnimation;
-    public AnimationClip idleAnimation;
+    public GameObject animationTarget;
     // Use this for initialization
     void Start()
     {
@@ -31,12 +30,12 @@ public class ParticleCollector : MonoBehaviour
         {
             //Debug.Log("Call Trigger Code");
             currentParticles++;
-            Destroy(col.gameObject);
+            col.gameObject.GetComponent<ParticleScript>().DestroyParticle();
             if (currentParticles >= maxParticles)
             {
                 // Destroy(GetComponent<BoxCollider>()); // Might not wanna do this idk yet
-                anim.SetBool("Full", true); 
-               
+                anim.SetBool("Full", true);
+                animationTarget.GetComponent<FlowerHouse>().Activate();
             }
         }
     }

@@ -70,7 +70,7 @@ public class ParticleScript : MonoBehaviour {
 			}
 		}
 
-        if (target != null)
+        if (target == null)
         {
             target = player;
         }
@@ -189,6 +189,12 @@ public class ParticleScript : MonoBehaviour {
     {
         target = player;
         Debug.Log("Return to Player");
+    }
+
+    public void DestroyParticle()
+    {
+        ParticleScript.allParticles.Remove(this);
+        Destroy(this.gameObject);
     }
 
 	void OnTriggerStay(Collider other) {
