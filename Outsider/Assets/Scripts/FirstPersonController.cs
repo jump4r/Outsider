@@ -161,6 +161,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			}
         }
 
+		//Added to facilitate flying
+		public void AddToMoveDir(Vector3 adding)
+		{
+			m_MoveDir += adding;
+		}
+
+		public Vector3 GetMoveDir()
+		{
+			return m_MoveDir;
+		}
+
 		public bool DisableGravity = false;
 
         private void PlayJumpSound()

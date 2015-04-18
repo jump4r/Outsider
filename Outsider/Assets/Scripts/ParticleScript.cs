@@ -86,9 +86,10 @@ public class ParticleScript : MonoBehaviour {
         float maxSpeedReal = maxSpeed + Mathf.Min(dif.magnitude, 2f);
 
         float accelerationReal = maxSpeedReal / maxSpeed * targetAcceleration; //Scale acceleration the same amount
+
 		if(headToPosition)
 		{
-			maxSpeedReal *= 4f;
+			maxSpeedReal *= 200f;
 			accelerationReal *= 100f;
 		}
         if (velocity.magnitude > maxSpeedReal & !shot)
@@ -121,7 +122,7 @@ public class ParticleScript : MonoBehaviour {
 
 				accelerationReal = Mathf.Min(accelerationReal, velocityDif.magnitude);
 
-				velocity += velocityDif * accelerationReal * Time.deltaTime;
+				velocity += velocityDif.normalized * accelerationReal * Time.deltaTime;
 			}
 			else
 			{
