@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 
 #if UNITY_EDITOR
+using UnityEditor;
+
+
 [CustomEditor(typeof(ProceduralTube))]
 public class ProceduralTubeEditor : Editor
 {
