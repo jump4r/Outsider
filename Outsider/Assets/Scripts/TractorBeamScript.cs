@@ -58,6 +58,7 @@ public class TractorBeamScript : MonoBehaviour {
 
 	Vector3 previousPos;
 
+    public bool unlimitedFlight = true;
 	// Update is called once per frame
 	void Update () {
 	
@@ -76,7 +77,7 @@ public class TractorBeamScript : MonoBehaviour {
 		
 		//controller.AddToMoveDir(-1f controller.ge* friction * Time.deltaTime;
 
-		if((Input.GetMouseButton(0) || Input.GetButton("TractorBeam")) && disTraveled < ParticleScript.allParticles.Count * disFromParticle)
+		if((Input.GetMouseButton(0) || Input.GetButton("TractorBeam")) && (disTraveled < ParticleScript.allParticles.Count * disFromParticle || unlimitedFlight))
 		{
 			if(Input.GetMouseButtonDown(0) || Input.GetButtonDown("TractorBeam"))
 			{

@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 public class FogZone : MonoBehaviour {
 
+    Camera[] cameras;
 	// Use this for initialization
 	void Start () {
-	
+        cameras = GameObject.FindObjectsOfType<Camera>();
 	}
 
 	static FogZone currentFogZone;
@@ -37,7 +38,14 @@ public class FogZone : MonoBehaviour {
 		{
 			RenderSettings.fogStartDistance = Mathf.Lerp(RenderSettings.fogStartDistance, fogStartDistance, rate * Time.deltaTime);
 			RenderSettings.fogEndDistance = Mathf.Lerp(RenderSettings.fogEndDistance, fogEndDistance, rate * Time.deltaTime);
-			RenderSettings.fogColor = Color.Lerp(RenderSettings.fogColor, fogColor, rate * Time.deltaTime);
+
+            Color c = Color.Lerp(RenderSettings.fogColor, fogColor, rate * Time.deltaTime);
+            RenderSettings.fogColor = c;
+
+            foreach (Camera cam in cameras)
+            {
+                cam.backgroundColor = c;
+            }
 		}
 	}
 }
