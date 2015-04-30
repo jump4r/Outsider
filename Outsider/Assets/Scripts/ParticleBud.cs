@@ -5,6 +5,8 @@ public class ParticleBud : MonoBehaviour {
 
 	// [RequireComponent (typeof (Animator))]
 
+	[SerializeField] private AudioClip m_creakSound;
+
 	public int  numToSpawn = 4;
 
 	public GameObject particle;
@@ -16,11 +18,12 @@ public class ParticleBud : MonoBehaviour {
 
 	public AnimationClip open;
 	private Animation anim;
+	private AudioSource m_audioSource;
 
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animation>();
-
+		m_audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -47,7 +50,14 @@ public class ParticleBud : MonoBehaviour {
 			Debug.Log ("Play the god damn door opening animation");
 			anim.clip = open;
 			anim.Play ();
+			PlayOpenSound ();
+
 		}
+	}
+
+	void PlayOpenSound() {
+		m_audioSource.clip = m_creakSound;
+		m_audioSource.Play ();
 	}
 
 	void OnTriggerEnter(Collider col) {
