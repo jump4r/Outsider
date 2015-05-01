@@ -1,23 +1,16 @@
 fileFormatVersion: 2
-guid: 479e5edba543ca544897dcc879f8b932
-timeCreated: 1430468482
-licenseType: Pro
+guid: a277a3ab04692204f9f0f1f1804a5aae
+timeCreated: 1430518105
+licenseType: Free
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: pPipe2
-    100002: pPipe3
-    100004: //RootNode
-    400000: pPipe2
-    400002: pPipe3
-    400004: //RootNode
-    2300000: pPipe2
-    3300000: pPipe2
-    4300000: pPipe2
-    4300002: pPipe3
-    7400000: Take 001
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pCylinder1
     9500000: //RootNode
-    13700000: pPipe3
   materials:
     importMaterials: 1
     materialName: 0
