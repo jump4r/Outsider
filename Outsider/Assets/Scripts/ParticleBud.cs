@@ -20,6 +20,8 @@ public class ParticleBud : MonoBehaviour {
 	private Animation anim;
 	private AudioSource m_audioSource;
 
+    public Sprite[] possibleSprites;
+
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animation>();
@@ -32,11 +34,15 @@ public class ParticleBud : MonoBehaviour {
 	}
 
 	private void SpawnParticles() {
+
+        int randomSprite = Random.Range(0, possibleSprites.Length);
+
 		for ( int i = 0; i < numToSpawn; i++) {
             if (!spawnRandomSoundParticle)
             {
                 GameObject sParticle = GameObject.Instantiate(soundParticle, transform.position, Quaternion.identity) as GameObject;
                 sParticle.GetComponent<ParticleScript>().SetVelocity((Vector3.up + (Random.insideUnitSphere) * .3f) * particleExitVelocity);
+                sParticle.GetComponent<SpriteRenderer>().sprite = possibleSprites[randomSprite];
                 spawnFlag = false;
                 spawnRandomSoundParticle = true;
                 continue;
@@ -44,7 +50,8 @@ public class ParticleBud : MonoBehaviour {
 
 			GameObject tmp = GameObject.Instantiate(particle, transform.position, Quaternion.identity) as GameObject;
 			tmp.GetComponent<ParticleScript>().SetVelocity ((Vector3.up + (Random.insideUnitSphere) * .3f) * particleExitVelocity);
-			spawnFlag = false;
+            tmp.GetComponent<SpriteRenderer>().sprite = possibleSprites[randomSprite];
+            spawnFlag = false;
 
             
 			Debug.Log ("Play the god damn door opening animation");
