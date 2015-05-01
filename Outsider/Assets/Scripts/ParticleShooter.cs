@@ -34,10 +34,11 @@ public class ParticleShooter : MonoBehaviour {
 
             // Hacky solution to simulate shooting because raycasting doesn't work /cry.
             // Shoot first object that was hit.
+            /*
             if (!collectorDetected && hit.Length > 0)
             {
                 Shoot(hit[0].transform);
-            }
+            }*/
         }
 	}
 
@@ -57,7 +58,7 @@ public class ParticleShooter : MonoBehaviour {
         ps.shot = true;
         ps.velocity = (target.transform.position - ps.gameObject.transform.position).normalized * shootSpeed * Time.fixedDeltaTime;
         ps.SetShotTarget(target.gameObject);
-        ps.Invoke("ReturnToPlayer", 5f);
+        ps.Invoke("SetTargetToPlayer", 5f);
         
         Debug.Log("Shoot Particle: " + particleIndex + " at GameObject " + target.transform);
         particleIndex += 1;

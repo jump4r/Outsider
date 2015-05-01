@@ -1,16 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(Animator))]
+
 public class Door : MonoBehaviour
 {
 
-    [HideInInspector]
     public bool unlocked = false;
+    private Animator animator;
+    public GameObject meshCollider_object;
+    private MeshCollider meshCollider;
 
     // Use this for initialization
     void Start()
     {
-
+        animator = GetComponent<Animator>();
+        meshCollider = meshCollider_object.GetComponent<MeshCollider>();
     }
 
     // Update is called once per frame
@@ -24,8 +30,9 @@ public class Door : MonoBehaviour
         if (unlocked)
         {
             Debug.Log("Play Door Opening Animation.");
-            gameObject.GetComponent<MeshRenderer>().enabled = false;
-            gameObject.GetComponent<BoxCollider>().enabled = false;
+            animator.SetBool("Entered", true);
+            animator.SetBool("Exited", false);
+            meshCollider.enabled = false;
         }
     }
 
@@ -34,8 +41,9 @@ public class Door : MonoBehaviour
         if (unlocked)
         {
             Debug.Log("Play Door Closing Animation.");
-            gameObject.GetComponent<MeshRenderer>().enabled = true;
-            gameObject.GetComponent<BoxCollider>().enabled = true;
+            animator.SetBool("Entered", false);
+            animator.SetBool("Exited", true);
+            meshCollider.enabled = true;
         }
     }
 
