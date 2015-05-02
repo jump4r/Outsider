@@ -65,6 +65,8 @@ public class TractorBeamScript : MonoBehaviour {
     public bool unlimitedFlight = true;
 
     bool justTractored = true;
+    float flightTimer = 0f;
+
 	// Update is called once per frame
 	void Update () {
 	
@@ -72,7 +74,8 @@ public class TractorBeamScript : MonoBehaviour {
 		if(!grounded)
 		{
             gameObjectToFloat.GetComponent<CharacterController>().Move(dir * velocityMagnitude * Time.deltaTime);//velocity * Time.deltaTime);
-		}
+		    
+        }
 		else
 		{
             velocityMagnitude = 0f;
@@ -84,6 +87,17 @@ public class TractorBeamScript : MonoBehaviour {
 		//velocity -= velocity * friction * Time.deltaTime;
 		
 		//controller.AddToMoveDir(-1f controller.ge* friction * Time.deltaTime;
+
+        if (disTraveled > ParticleScript.allParticles.Count * disFromParticle)
+        {
+            flightTimer += Time.deltaTime;
+        }
+
+        if(flightTimer > 2.5f)
+        {
+            disTraveled = 0f;
+            flightTimer = 0f;
+        }
 
 		if((Input.GetMouseButton(0) || Input.GetAxis("TractorBeam") > .2f) && (disTraveled < ParticleScript.allParticles.Count * disFromParticle || unlimitedFlight))
 		{
