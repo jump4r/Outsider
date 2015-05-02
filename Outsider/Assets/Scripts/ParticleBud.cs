@@ -35,7 +35,7 @@ public class ParticleBud : MonoBehaviour {
 
 	private void SpawnParticles() {
 
-        int randomSprite = Random.Range(0, possibleSprites.Length);
+        int randomSprite = Random.Range(0, possibleSprites.Length-1);
 
 		for ( int i = 0; i < numToSpawn; i++) {
             if (!spawnRandomSoundParticle)
