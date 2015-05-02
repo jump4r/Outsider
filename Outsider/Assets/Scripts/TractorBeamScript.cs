@@ -45,7 +45,11 @@ public class TractorBeamScript : MonoBehaviour {
 		expireCount = 0;
 	}
 
+    float velocityMagnitude = 0f;
+
 	Vector3 velocity;
+    Vector3 dir;
+
 	public float acceleration = .3f;
 	public float friction = .2f;
 	public float maxSpeed = 15;
@@ -59,13 +63,15 @@ public class TractorBeamScript : MonoBehaviour {
 	Vector3 previousPos;
 
     public bool unlimitedFlight = true;
+
+    bool justTractored = true;
 	// Update is called once per frame
 	void Update () {
 	
 		bool grounded = gameObjectToFloat.GetComponent<CharacterController>().isGrounded;
 		if(!grounded)
 		{
-			gameObjectToFloat.GetComponent<CharacterController>().Move(velocity * Time.deltaTime);
+            gameObjectToFloat.GetComponent<CharacterController>().Move(dir * velocityMagnitude * Time.deltaTime);//velocity * Time.deltaTime);
 		}
 		else
 		{
@@ -73,18 +79,19 @@ public class TractorBeamScript : MonoBehaviour {
 		}
 		//friction
 
-			velocity -= velocity * friction * Time.deltaTime;
+        velocityMagnitude -= friction * Time.deltaTime;
+		//velocity -= velocity * friction * Time.deltaTime;
 		
 		//controller.AddToMoveDir(-1f controller.ge* friction * Time.deltaTime;
 
-		if((Input.GetMouseButton(0) || Input.GetButton("TractorBeam")) && (disTraveled < ParticleScript.allParticles.Count * disFromParticle || unlimitedFlight))
+		if((Input.GetMouseButton(0) || Input.GetAxis("TractorBeam") > .2f) && (disTraveled < ParticleScript.allParticles.Count * disFromParticle || unlimitedFlight))
 		{
-			if(Input.GetMouseButtonDown(0) || Input.GetButtonDown("TractorBeam"))
+			if(justTractored)
 			{
 				points.Clear();
 				previousPos = transform.position;
 			}
-
+            justTractored = true;
 			tractorBeamOn = true;
 			disTraveled += (previousPos - transform.position).magnitude;
 			previousPos = transform.position;
@@ -98,10 +105,24 @@ public class TractorBeamScript : MonoBehaviour {
 				points.Add(transform.position + target*4f);
 			}
 
+            dir = target;
 
-			if(velocity.magnitude < maxSpeed)
+            float realMaxSpeed = maxSpeed;
+
+            float angleDown = Vector3.Angle(Vector3.down, dir);
+
+            float speedModifier = 1f;
+
+            if(angleDown < 50f)
+            {
+                speedModifier = (1f - (angleDown / 50f)) * 1.5f;
+                realMaxSpeed += (realMaxSpeed ) * speedModifier;
+            }
+
+            if (velocityMagnitude < realMaxSpeed) //velocity.magnitude < maxSpeed || 
 			{
-				velocity += target * acceleration * Time.deltaTime;
+                velocityMagnitude += acceleration * speedModifier * Time.deltaTime;
+				//velocity += target * acceleration * Time.deltaTime;
 			}
 			//controller.AddToMoveDir(target * acceleration * Time.deltaTime);
 
@@ -141,6 +162,7 @@ public class TractorBeamScript : MonoBehaviour {
 		}
 		else
 		{
+            justTractored = false;
 			expireCount += Time.deltaTime;
 			if(expireCount > expireTime)
 			{
