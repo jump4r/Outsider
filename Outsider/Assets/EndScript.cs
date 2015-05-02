@@ -5,15 +5,17 @@ public class EndScript : MonoBehaviour
 {
     public float fadeSpeed = 1.5f;          // Speed that the screen fades to and from black.
 
-    public static int EndCondition = 0;         // Mini-end condition if we want to add it, collect all (3/4?) Keys to activate end condition.
+    public int EndCondition = 0;         // Mini-end condition if we want to add it, collect all (3/4?) Keys to activate end condition.
 
     private bool sceneStarting = true;      // Whether or not the scene is still fading in.
 
     public GameObject endCamera;
 
+    public static EndScript instance;
     GUITexture guiTexture;
     void Awake()
     {
+        instance = this;
         guiTexture = GetComponent<GUITexture>();
         // Set the texture so that it is the the size of the screen and covers it.
          guiTexture.pixelInset = new Rect(0f, 0f, Screen.width, Screen.height);
@@ -93,7 +95,7 @@ public class EndScript : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
-        if (other.tag == "Player")
+        if (other.tag == "Player" && EndCondition > 4)
         {
             endingScene = true;
             
