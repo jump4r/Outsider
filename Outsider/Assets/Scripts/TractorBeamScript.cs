@@ -87,7 +87,7 @@ public class TractorBeamScript : MonoBehaviour {
 
 		if((Input.GetMouseButton(0) || Input.GetAxis("TractorBeam") > .2f) && (disTraveled < ParticleScript.allParticles.Count * disFromParticle || unlimitedFlight))
 		{
-			if(justTractored)
+			if(!justTractored)
 			{
 				points.Clear();
 				previousPos = transform.position;
@@ -175,9 +175,6 @@ public class TractorBeamScript : MonoBehaviour {
 
 		if(tractorBeamOn && ParticleScript.allParticles.Count > 0)
 		{
-
-				expireCount = 0;
-			
 				offset -= updateSpeed * Time.deltaTime;
 
 				frequency = .5f + Mathf.Sin (offset/20f)* 100f;
@@ -206,6 +203,12 @@ public class TractorBeamScript : MonoBehaviour {
 
 					for(int i = 0; i < particleAmount; i++)
 					{
+
+                        if(total > ParticleScript.allParticles.Count)
+                        {
+                            break;
+                        }
+
 						float disAlongPath = ((float)(total / (float)particlesCount));
 						ParticleScript particle = ParticleScript.allParticles[total];
 
