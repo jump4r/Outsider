@@ -12,7 +12,7 @@ public class RestartGameScript : MonoBehaviour {
 	void Update () {
         if (Input.GetButtonDown("BackButton") || Input.GetKeyDown(KeyCode.Y))
         {
-            Application.LoadLevel(Application.loadedLevel);
+            Application.LoadLevel("Intro");
         }
 	}
 }
