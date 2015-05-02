@@ -36,6 +36,7 @@ public class ParticleCollector : MonoBehaviour
                 // Destroy(GetComponent<BoxCollider>()); // Might not wanna do this idk yet
                 anim.SetBool("Full", true);
                 animationTarget.GetComponent<FlowerHouse>().Activate();
+                full = true;
             }
         }
     }

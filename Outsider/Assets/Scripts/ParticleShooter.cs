@@ -6,11 +6,12 @@ public class ParticleShooter : MonoBehaviour {
     private const float shootSpeed = 5f;
     private int particleIndex = 0;
     private Camera camera;
+    private TractorBeamScript tractorBeam;
 
 	// Use this for initialization
 	void Start () {
         // Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = true;
+        tractorBeam = GetComponent<TractorBeamScript>();
 	}
 	
 	// Update is called once per frame
@@ -50,6 +51,8 @@ public class ParticleShooter : MonoBehaviour {
             return;
         }
 
+        tractorBeam.tractorBeamOn = false;
+
         if (particleIndex >= ParticleScript.allParticles.Count) {
             particleIndex = 0;
         }
@@ -58,7 +61,7 @@ public class ParticleShooter : MonoBehaviour {
         ps.shot = true;
         ps.velocity = (target.transform.position - ps.gameObject.transform.position).normalized * shootSpeed * Time.fixedDeltaTime;
         ps.SetShotTarget(target.gameObject);
-        ps.Invoke("SetTargetToPlayer", 5f);
+        ps.Invoke("SetTargetToPlayer", 20f);
         
         Debug.Log("Shoot Particle: " + particleIndex + " at GameObject " + target.transform);
         particleIndex += 1;

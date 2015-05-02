@@ -9,12 +9,17 @@ public class Player : MonoBehaviour {
 	private float flightAcceleration = .5f;
 	private float flightVelocity = 2f;
 	private const float maxFlightAcceleration = 5f;
+    private Rigidbody r;
 
+    public bool OculusEnabled;
+    public GameObject TractorBeamObject;
+    private TractorBeamScript tractorBeam;
 	// Use this for initialization
 	void Start () {
 		m_CharacterController = GetComponent<CharacterController>();
+        tractorBeam = TractorBeamObject.GetComponent<TractorBeamScript>();
+        r = GetComponent<Rigidbody>();
 
-		
 		Cursor.lockState = CursorLockMode.Locked;
 		Cursor.visible = false;
 	}
@@ -33,6 +38,11 @@ public class Player : MonoBehaviour {
             {
                 ParticleScript.allParticles[i].GetComponent<ParticleScript>().SetTarget(newTarget);
             }
+        }
+
+        if (Input.GetButtonDown("Jump") && OculusEnabled && tractorBeam.tractorBeamOn)
+        {
+            r.AddForce(Vector3.up * 10, ForceMode.Acceleration);
         }
 	}
 
