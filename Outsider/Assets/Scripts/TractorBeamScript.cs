@@ -75,6 +75,7 @@ public class TractorBeamScript : MonoBehaviour {
 		}
 		else
 		{
+            velocityMagnitude = 0f;
 			disTraveled = 0;
 		}
 		//friction
