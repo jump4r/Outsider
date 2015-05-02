@@ -13,7 +13,7 @@ public class ParticleBud : MonoBehaviour {
     public GameObject soundParticle;
     private bool spawnRandomSoundParticle = false;
 
-	private const float particleExitVelocity = 11f; 
+	private const float particleExitVelocity = 6f; 
 	private bool spawnFlag = true;
 
 	public AnimationClip open;
@@ -41,7 +41,7 @@ public class ParticleBud : MonoBehaviour {
             if (!spawnRandomSoundParticle)
             {
                 GameObject sParticle = GameObject.Instantiate(soundParticle, transform.position, Quaternion.identity) as GameObject;
-                sParticle.GetComponent<ParticleScript>().SetVelocity((Vector3.up + (Random.insideUnitSphere) * .3f) * particleExitVelocity);
+                sParticle.GetComponent<ParticleScript>().SetVelocity((Vector3.up + (Random.insideUnitSphere) * .2f) * particleExitVelocity);
                 sParticle.GetComponent<SpriteRenderer>().sprite = possibleSprites[randomSprite];
                 spawnFlag = false;
                 spawnRandomSoundParticle = true;
