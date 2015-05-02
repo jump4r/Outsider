@@ -6,14 +6,17 @@ public class Key : MonoBehaviour
 
     public GameObject doorObject;
 
-    private Door door;
+    private Door door = null;
     private static int openThreshold = 50;
     private int numParticles = 0;
 
     // Use this for initialization
     void Start()
     {
-        door = doorObject.GetComponent<Door>();
+        if (doorObject != null)
+        {
+            door = doorObject.GetComponent<Door>();
+        }
     }
 
     // Update is called once per frame
@@ -29,11 +32,22 @@ public class Key : MonoBehaviour
     {
         if (col.tag == "Player")
         {
-            door.unlocked = true;
-            Debug.Log("Door Unlocked");
-            Destroy(this.gameObject);
+            if (door != null)
+            {
+                door.unlocked = true;
+                Debug.Log("Door Unlocked");
+                Destroy(this.gameObject);
+            }
+
+            else
+            {
+                EndScript.EndCondition += 1;
+                Debug.Log("One Key Collected Towards End Condition");
+                Destroy(this.gameObject);
+            }
         }
 
+        /* Code Unneeded for game fest :( RIP 
         // If we have particles opening the door.
         else if (col.tag == "Particle")
         {
@@ -54,6 +68,7 @@ public class Key : MonoBehaviour
                 numParticles += 1;
             }
         }
+         */
     }
 
     void OnTriggerExit(Collider col)

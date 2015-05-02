@@ -30,8 +30,10 @@ public class FlowerHouse : MonoBehaviour
         animator.SetTrigger("OpenTrigger");
     }
 
+    // Gotta show off these sexy animations tho
+
     void OnTriggerEnter(Collider col)
     {
-
+        OpenDoor();
     }
 }

@@ -5,6 +5,7 @@ public class EndScript : MonoBehaviour
 {
     public float fadeSpeed = 1.5f;          // Speed that the screen fades to and from black.
 
+    public static int EndCondition = 0;         // Mini-end condition if we want to add it, collect all (3/4?) Keys to activate end condition.
 
     private bool sceneStarting = true;      // Whether or not the scene is still fading in.
 
