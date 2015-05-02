@@ -41,7 +41,7 @@ public class Key : MonoBehaviour
 
             else
             {
-                EndScript.EndCondition += 1;
+                //EndScript.EndCondition += 1;
                 Debug.Log("One Key Collected Towards End Condition");
                 Destroy(this.gameObject);
             }
